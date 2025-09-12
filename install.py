@@ -1,7 +1,6 @@
 import os
 import sys
 
-print(os.name)
 print("Let's install your config!")
 
 print("# Installation Options")
@@ -19,7 +18,7 @@ match choice:
         os.system("sudo pacman -S neovim")
         print("\nNeovim installed")
         print("\n Moving configs")
-        os.system("mv ~/navi/configs/nvim ~/.config")
+        os.system("cp -r ~/navi/configs/nvim ~/.config")
         print("\n Configs moved!")
 
     case _:

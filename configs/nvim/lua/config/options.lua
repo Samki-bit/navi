@@ -1,0 +1,9 @@
+vim.wo.number = true
+vim.o.relativenumber = true
+vim.o.clipboard = 'unnamedplus'
+vim.o.wrap = false
+vim.o.linebreak = true
+vim.o.autoindent = true
+vim.o.shiftwidth = 4 -- The number of spaces inserted for each indentation (default: 8)
+vim.o.tabstop = 4 -- Insert n spaces for a tab (default: 8)
+vim.o.softtabstop = 4 -- Number of spaces that a tab counts for while performing editing operations (default: 0)
