@@ -6,7 +6,6 @@ My Linux configuration files
 
 Here’s how someone (including myself in the future) can use it
 
-1. Clone the repo
 
    ```bash
    git clone https://github.com/Samki-bit/navi.git
