@@ -1,0 +1,8 @@
+kitty
+hyprland
+hyprpaper
+hyprlock
+nvim
+waybar
+wofi
+ttf-cascadia-code-nerd
