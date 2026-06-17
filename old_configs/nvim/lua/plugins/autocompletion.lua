@@ -1,5 +1,5 @@
 return { -- Autocompletion
-	{"hrsh7th/nvim-cmp",
+	"hrsh7th/nvim-cmp",
 	dependencies = {
 		-- Snippet Engine & its associated nvim-cmp source
 		{
@@ -169,13 +169,5 @@ return { -- Autocompletion
 				end,
 			},
 		})
-	end
-},
-    {
-		-- Autoclose parentheses, brackets, quotes, etc.
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-		opts = {},
-    }
+	end,
 }
