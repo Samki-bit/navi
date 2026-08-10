@@ -1,0 +1,6 @@
+exec --no-startup-id feh --bg-scale ~/.config/wallpapers/sekiro.png
+set $bg #e16845
+set $fg #222222
+set $accent #c44240
+client.focused $accent $bg $fg
+

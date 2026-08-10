@@ -14,6 +14,7 @@ for_window [class="^.*"] border pixel 1
 gaps inner 5
 gaps outer 2
 
+gaps bottom 43
 
 set $mod Mod1
 
@@ -21,7 +22,6 @@ set $mod Mod1
 #Start Up
 exec_always --no-startup-id picom
 exec --no-startup-id polybar
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpapers/sekiro.png
 exec --no-startup-id nvidia-settings --load-config-only
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -62,8 +62,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
-
+bindsym $mod+Return exec --no-startup-id kitty tmux new 
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -78,10 +77,10 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+Control+l exec i3lock -c 000000
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -90,10 +89,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -102,7 +101,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Control+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -201,8 +200,5 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+include ~/.config/i3/current_theme
 
-#Window Colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #c44240 #e16845 #222222   
-client.unfocused        #333333 #222222 #888888 
