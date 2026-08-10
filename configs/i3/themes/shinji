@@ -1,4 +1,4 @@
-exec --no-startup-id  feh --bg-scale ~/.config/wallpapers/shinji.png
+exec_always --no-startup-id  feh --bg-scale ~/.config/wallpapers/shinji.png
 set $bg #e16845
 set $accent #000000
 set $fg #ffffff
