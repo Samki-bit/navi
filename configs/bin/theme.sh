@@ -6,17 +6,26 @@
 
 THEME_DIR="$HOME/.config/i3/themes"
 TARGET_LINK="$HOME/.config/i3/current_theme"
+WALLPAPER_DIR="$HOME/.config/wallpapers"
 
 set_theme() {
     local THEME="$1"
+    local WALLPAPER="$WALLPAPER_DIR/$THEME.png"
 
     if [[ ! -e "$THEME_DIR/$THEME" ]]; then
         echo "Error: theme '$THEME' not found in $THEME_DIR"
         exit 1
     fi
 
+    if [[ ! -f "$WALLPAPER" ]]; then
+        echo "Error: wallpaper '$WALLPAPER' not found"
+        exit 1
+    fi
+
+    feh --bg-scale "$WALLPAPER"
+
     ln -sf "$THEME_DIR/$THEME" "$TARGET_LINK"
-    # 3. Tell i3 to reload colors instantly without restarting windows
+
     i3-msg reload >/dev/null 2>&1
 
     echo "Theme set to: $THEME"
