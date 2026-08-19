@@ -1,5 +1,6 @@
 exec_always --no-startup-id  feh --bg-scale ~/.config/wallpapers/shinji.png
-set $bg #e16845
-set $accent #000000
+set $bg #000000
+set $accent #b8b8b8
 set $fg #ffffff
+
 client.focused $accent $bg $fg $accent $accent

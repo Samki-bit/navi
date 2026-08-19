@@ -1,0 +1,6 @@
+exec_always --no-startup-id  feh --bg-scale ~/.config/wallpapers/man.png
+set $bg #000000
+set $accent #574f44
+set $fg #ffffff
+
+client.focused $accent $bg $fg $accent $accent
