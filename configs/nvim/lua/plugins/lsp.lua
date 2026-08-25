@@ -9,8 +9,8 @@ return {
                     ensure_installed = { "lua_ls", "rust_analyzer", 'clangd', 'neocmake', 'pyright'},
                 },
             },
-
     	},
+
         config =  function()
         vim.lsp.config("lua_ls", {
             settings = {
@@ -23,7 +23,7 @@ return {
         })
 
         vim.lsp.enable('lua_ls')
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+        vim.keymap.set('n', 'D', vim.lsp.buf.hover, {noremap = true})
         vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action,{})
 
         vim.lsp.enable("clangd")

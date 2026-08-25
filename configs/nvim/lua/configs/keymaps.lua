@@ -23,3 +23,11 @@ vim.keymap.set("n", "<leader>se", "<C-w>=")     -- make split windows equal widt
 vim.keymap.set("n", "<leader>xs", ":close<CR>") -- close current split window
 
 vim.keymap.set('n', '<C-c>', '<cmd>noh<CR>')
+
+-- Move lines up and down in Normal Mode
+vim.keymap.set("n", "J", ":m .+1<CR>==")
+vim.keymap.set("n", "K", ":m .-2<CR>==")
+
+-- Move lines up and down in Visual Mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
